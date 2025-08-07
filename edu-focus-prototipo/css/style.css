@@ -1,0 +1,60 @@
+/* css/styles.css */
+
+/* --- Variables de Color (Modo Claro por defecto) --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --primary-color: #0d6efd;
+}
+
+/* --- Tema para el Modo Oscuro --- */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --border-color: #444;
+}
+
+/* --- Aplicación de los Temas --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.card-title, .card-text {
+    color: var(--text-color);
+}
+
+.border-bottom, .border-top {
+    border-color: var(--border-color) !important;
+}
+
+.text-dark {
+    color: var(--text-color) !important;
+}
+.text-muted {
+    color: #6c757d !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: #aaa !important;
+}
+
+/* --- Accesibilidad del Teclado --- */
+/* Mejora el foco para ser más visible durante la navegación con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+}
